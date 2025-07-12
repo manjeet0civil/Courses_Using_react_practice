@@ -10,8 +10,7 @@ const Cards = (props) => {
     
 
     function getCourses() {
-
-        if(!props.category) return [];
+        if (!props.courses) return [];
 
         if (category === "All") {
             let allCourses = [];
@@ -21,10 +20,8 @@ const Cards = (props) => {
                 });
             });
             return allCourses;
-        }
-        else
-        {
-            return props.courses[category] ||[];
+        } else {
+            return props.courses[category] || [];
         }
     }
 
